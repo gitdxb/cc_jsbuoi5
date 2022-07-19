@@ -22,19 +22,14 @@ function tinhTienDien() {
     var thanhTien = 0;
 
     if (0 < soKW && soKW <= 50) {
-        console.log('Gia dau');
         thanhTien = soKW * KW_0;
     } else if (50 < soKW && soKW <= 100) {
-        console.log('Gia 50');
         thanhTien = 50 * KW_0 + (soKW - 50) * KW_50;
     } else if (100 < soKW && soKW <= 200) {
-        console.log('Gia 100');
         thanhTien = 50 * KW_0 + 50 * KW_50 + (soKW - 100) * KW_100;
     } else if (200 < soKW && soKW <= 350) {
-        console.log('Gia 150');
         thanhTien = 50 * KW_0 + 50 * KW_50 + 100 * KW_100 + (soKW - 200) * KW_150;
     } else if (soKW > 350) {
-        console.log('Gia 350');
         thanhTien = 50 * KW_0 + 50 * KW_50 + 100 * KW_100 + 150 * KW_150 + (soKW - 350) * TREN_KW150;
     }
 document.querySelector('#kqBai2').innerHTML = 'Họ tên: ' + hoTen + ', Tiền điện: ' + thanhTien.toLocaleString();
