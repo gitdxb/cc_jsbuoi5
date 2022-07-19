@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <!-- Bai 3 -->
+        <!-- Bai 3 DONE -->
         <div class="tab-pane fade show" id="bai3" role="tabpanel" aria-labelledby="bai-3">
             <div class="col-6 py-5 my-2">
                 <h2>💰 Tính thuế thu nhập cá nhân</h2>
@@ -131,21 +131,25 @@
         <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai-4">
             <div class="col-6 py-5 my-2">
                 <h2>🕸️ Tính tiền cáp</h2>
-                <ul>
-                <li>Đều: Nếu 3 cạnh bằng nhau. Vd:a = 3, b=3 c=3</li>
-                <li>Cân: Nếu 2 cạnh bằng nhau. Vd: a=2, b=2, c=1</li>
-                <li>Vuông: c^2 = a^2 + b^2. Vd: a=3, b=4, c=5</li>
-                </ul>
                 <form>
-                <div class="form-group">
-                    <input type="number" class="form-control" id="canh1" placeholder="Nhập độ dài cạnh 1">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" id="canh2" placeholder="Nhập độ dài cạnh 2">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" id="canh3" placeholder="Nhập độ dài cạnh 3">
-                </div>
+                    <div class="form-row form-group">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <select id="chonKH" class="form-control" name="">
+                                <option selected value="">Chọn loại khách hàng</option>
+                                <option value="2">Nhà Dân</option>
+                                <option value="1">Doanh Nghiệp</option>
+                                </select>
+                            </div>
+                        </div>
+                    <div class="form-group col-lg-4">
+                        <input type="number" class="form-control" id="maKH" placeholder="Nhập mã khách hàng">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <input type="number" class="form-control" id="soKenh" placeholder="Số kênh cao cấp">
+                    </div>
+                    </div>
+                    
                 <button id="btnBai4" type="button" class="btn btn-success">Kết quả</button>
         
                 </form>
