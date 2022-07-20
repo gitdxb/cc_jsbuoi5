@@ -135,15 +135,16 @@
                     <div class="form-row form-group">
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <select id="chonKH" class="form-control" name="">
+                                <select onchange="myFunction()" id="chonKH" class="form-control" name="">
                                 <option selected value="">Chọn loại khách hàng</option>
-                                <option value="2">Nhà Dân</option>
-                                <option value="1">Doanh Nghiệp</option>
+                                <option value="ND">Nhà Dân</option>
+                                <option value="DN">Doanh Nghiệp</option>
                                 </select>
+                                <p id="demo"></p>
                             </div>
                         </div>
                     <div class="form-group col-lg-4">
-                        <input type="number" class="form-control" id="maKH" placeholder="Nhập mã khách hàng">
+                        <input type="text" class="form-control" id="maKH" placeholder="Nhập mã khách hàng">
                     </div>
                     <div class="form-group col-lg-4">
                         <input type="number" class="form-control" id="soKenh" placeholder="Số kênh cao cấp">
@@ -173,6 +174,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
     crossorigin="anonymous"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("chonKH").value;
+          document.getElementById("demo").innerHTML = '<input id="soKetNoi" type="number" class="my-3 form-control" placeholder="Số kết nối">';
+
+            // Tuy chon
+            var select = document.querySelector('#chonKH');
+            var option = select.options[select.selectedIndex].value;
+            if (option == 'ND') {
+                document.getElementById("demo").innerHTML = '';
+            }
+        }
+        </script>
     <!-- JS files -->
     <script src="./js/bai1.js"></script>
     <script src="./js/bai2.js"></script>
